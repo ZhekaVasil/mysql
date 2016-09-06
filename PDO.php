@@ -34,5 +34,8 @@ $id = $_POST['id'];
 $stmt = $conn->prepare("DELETE FROM users WHERE id = :id");
 $stmt->bindParam(':id', $id);
 $stmt->bindParam(':name', $name);
-$stmt->execute([':id' => $id, ':name' => $name]);
+ $stmt->execute();
+ 
+ 
+//$stmt->execute([':id' => $id, ':name' => $name]);
 unset($conn);
